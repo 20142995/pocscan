@@ -6,17 +6,12 @@ from urllib.parse import urlparse
 
 requests.packages.urllib3.disable_warnings()
 
-def get_plugin_info():
-    plugin_info = {
+def poc(arg):
+    '''{
         "name": "ElasticSearch 未授权访问",
         "desc": "未授权访问导致数据信息泄露，部分版本或插件存在漏洞，严重可导致服务器被入侵。",
         "grade": "中",
-        "type": "web",
-        "keyword": "tag:elasticSearch port:9200"
-    }
-    return plugin_info
-
-def poc(arg):
+        "keyword": "type:web app:elasticSearch port:9200 tag:unauth"}'''
     arg = arg if "://" in arg else f"http://{arg}"
     timeout = 5
     headers = {
