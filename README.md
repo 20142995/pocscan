@@ -20,13 +20,13 @@ optional arguments:
 
 ```
 # 加载指定路径脚本 
-pocscan -l ./pocs/test.py -i 127.0.0.1 -t 20
+python3 pocscan.py -l ./pocs/test.py -i 127.0.0.1 -t 20
 # 加载指定目录下所有脚本 
-pocscan -l ./pocs/ -i 127.0.0.1 -t 20
+python3 pocscan.py -l ./pocs/ -i 127.0.0.1 -t 20
 # 默认加载同目录下 pocs目录下的所有脚本 ，再通过-s 一些语法过滤
-pocscan -s "type:web || type:service" -i 127.0.0.1 -t 20
+python3 pocscan.py -s "type:web || type:service" -i 127.0.0.1 -t 20
 # 多目标模式,加载IP.txt里的目标
-pocscan -l ./pocs/test.py -i IP.txt -t 20
+python3 pocscan.py -l ./pocs/test.py -i IP.txt -t 20
 
 ```
 ## poc插件模板
